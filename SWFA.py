@@ -9,9 +9,8 @@ file_path = Path(path)
 if not file_path.exists():
     raise FileNotFoundError(f"Nem található a fájl: {file_path}")
 
-
 # Megnyitjuk a beszédet és beolvassuk egyetlen nagy szövegként (string)
-with open(path, "r", encoding="utf-8") as f:
+with open(file_path, "r", encoding="utf-8") as f:
     content = f.read()
 
 # időbélyeget követő szövegeket elmentjük feldolgozásra (list)
